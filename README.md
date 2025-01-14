@@ -39,7 +39,9 @@ Training went really well, with a loss of around 0.98 on fully self-generated se
 <p align="center"><img width=500 src="validation.png"/></p>
 
 ### Further Work
-With more time and resources I probably would have given to the transformer all the information about all the symbols available on each time_id. This would've meant that the model would've had around 45M parameters and training would've been much slower, but I think the loss would've been also lower, since features could have been computed across symbols.
+Bugs aside, there are two directions, and I'm sure both would yield a better score:
+ - Use more context for features and responders. The reducer of the time dimension would have to be scaled, but parameters would roughy stay the same. Memory is a hard constraint here though. In my main experiment block_size is 32 and batch_size 16, so the max block_size for a batch_size of 1 would have been 512.
+ - Pass all the information relative to all symbols at time_id t. This would add an extra dimension and moon the attention parameters, so a reducer strategy would probably be required.
 
 ### References
  - All the code provided is done by me except for the [SOAP optimizer](https://github.com/nikhilvyas/SOAP) and some setup options taken from karpathy's [nanoGPT](https://github.com/karpathy/nanoGPT).
