@@ -40,7 +40,7 @@ Training went really well, with a loss of around 0.98 on fully self-generated se
 With more time and resources I probably would have given to the transformer all the information about all the symbols available on each time_id. This would've meant that the model would've had around 45M parameters and training would've been much slower, but I think the loss would've been also lower, since features could have been computed across symbols.
 
 ### References
- - All the code provided is done by me except for the SOAP optimizer (https://github.com/nikhilvyas/SOAP) and some setup options taken from karpathy's nanoGPT (https://github.com/karpathy/nanoGPT).
+ - All the code provided is done by me except for the [SOAP optimizer](https://github.com/nikhilvyas/SOAP) and some setup options taken from karpathy's [nanoGPT](https://github.com/karpathy/nanoGPT).
  - https://arxiv.org/abs/1506.03099 for more information on scheduled sampling.
  - https://aclanthology.org/2021.emnlp-main.264.pdf for decoder-step and iter-based sample probabilities.
 
