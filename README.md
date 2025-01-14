@@ -35,7 +35,8 @@ The notebook implements an encoder-decoder transformer of around 1.5M parameters
 Training went really well, with a loss of around 0.98 on fully self-generated sequences. However I couldn't manage to translate this result to the test set used in the submission. I've thought about it and my main assumptions are:
  - A bug (leaking) during training. I've checked a bit and I'm pretty sure there is none, but I could be missing something.
  - A bug in my submission notebook. I checked as well and I don't think there is a bug there, but given the difficulty of debugging in a Kaggle environment I'm less confident.
- - The test set used to score the submission is quite different from my validation set. Since I only use about 8 days of validation (across 32 symbols, so 64 days in total) and those days are close to my training set this is what I consider to be the most plausible explanation. This means that if I had implemented online learning my submission score would have probably been much higher, but since I only had 15-20 days to write all the code and run the training (which took around 12 hours) I did not have too much time to iterate on that.
+ - The test set used to score the submission is harder than my validation set. That could be the case, but I doubt the gap would be so big.
+ - I'm not handling non-stationarity well enough. This could be solved with online learning or with better normalization. However I've found that adding normalization to the continuous features before adding the embedding dimension does not improve the loss at all. (at least during training, couldn't check with a submission).
 <p align="center"><img width=500 src="validation.png"/></p>
 
 ### Further Work
