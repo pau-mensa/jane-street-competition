@@ -4,7 +4,7 @@ This repo contains the notebook that reproduces the model and training schedule 
 
 ## Explanation
 
-The notebook implements an encoder-decoder transformer of around 1.5M parameters (customizable) and trains it using scheduled sampling and decoder-step-based sampling probabilities.
+The notebook implements an encoder-decoder transformer of around 1.5M parameters (customizable) and trains it using scheduled sampling (a technique used to reduce exposure bias in auto regressive sequences) and decoder-step-based sampling probabilities.
 
 ### Model Architecture
  1. The model takes a decoded sequence, a tensor of categorical variables, a tensor of continuous variables, a mask for when continuous variables are NaN, a tensor containing the responders of the previous day, a tensor containing the time_ids of the decoded sequence and a tensor that tells the model if a token in the decoded sequence is a golden token or a model generated token.
