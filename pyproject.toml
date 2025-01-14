@@ -1,0 +1,35 @@
+[project]
+name = "jane-street-competition"
+version = "0.1"
+description = "This project includes the notebook used to reproduce the model and training schedule used in my submission to the jane street competition."
+authors = [
+    { name = "pau-mensa", email = "pau.mopuig@gmail.com" },
+]
+dependencies = [
+    "cramjam==2.9.0",
+    "einops==0.8.0",
+    "fastparquet==2024.5.0",
+    "filelock==3.16.1",
+    "fsspec==2024.9.0",
+    "Jinja2==3.1.4",
+    "MarkupSafe==3.0.1",
+    "mpmath==1.3.0",
+    "numpy==1.26.4",
+    "packaging==24.1",
+    "pandas==2.2.3",
+    "python-dateutil==2.9.0.post0",
+    "pytz==2024.2",
+    "six==1.16.0",
+    "sympy==1.13.3",
+    "torch==2.4.1",
+    "typing_extensions==4.12.2",
+    "tzdata==2024.2",
+    "polars",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = { file = "LICENSE" }
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
